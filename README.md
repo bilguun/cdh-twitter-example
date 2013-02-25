@@ -175,12 +175,19 @@ Starting the data pipeline
 
     Create the HDFS directory hierarchy for the Flume sink. Make sure that it will be accessible by the user running the Oozie workflow.  
     
+    Create 'flume' user in Hue. As a Hue superuser, go in the User Admin application and create a new user 'flume'.
+    
+    This can also be done on the command line:
     <pre>
     $ hadoop fs -mkdir /user/flume/tweets
     $ hadoop fs -chown -R flume:flume /user/flume
     $ hadoop fs -chmod -R 770 /user/flume
-    $ sudo /etc/init.d/flume-ng-agent start
     </pre>
+
+   Then start Flume:
+   <pre>
+    $ sudo /etc/init.d/flume-ng-agent start
+  </pre>
 
 2. **Adjust the start time of the Oozie coordinator workflow in job.properties**
 

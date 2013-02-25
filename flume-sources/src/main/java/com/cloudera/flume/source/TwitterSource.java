@@ -32,6 +32,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import twitter4j.FilterQuery;
+import twitter4j.StallWarning;
 import twitter4j.Status;
 import twitter4j.StatusDeletionNotice;
 import twitter4j.StatusListener;
@@ -119,6 +120,9 @@ public class TwitterSource extends AbstractSource
       public void onTrackLimitationNotice(int numberOfLimitedStatuses) {}
       public void onScrubGeo(long userId, long upToStatusId) {}
       public void onException(Exception ex) {}
+
+      @Override
+      public void onStallWarning(StallWarning arg0) {}
     };
     
     logger.debug("Setting up Twitter sample stream using consumer key {} and" +
@@ -137,8 +141,7 @@ public class TwitterSource extends AbstractSource
     } else {
       logger.debug("Starting up Twitter filtering...");
       FilterQuery query = new FilterQuery()
-        .track(keywords)
-        .setIncludeEntities(true);
+        .track(keywords);
       twitterStream.filter(query);
     }
     super.start();
