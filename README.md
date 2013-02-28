@@ -3,7 +3,7 @@ Analyzing Twitter Data Using CDH
 
 Based on http://blog.cloudera.com/blog/2012/09/analyzing-twitter-data-with-hadoop/.
 
-This repository contains an example application for analyzing Twitter data using a variety of CDH components, including [Flume](http://flume.apache.org), [Oozie](http://incubator.apache.org/oozie), and [Hive](http://hive.apache.org).
+This repository contains an example application for analyzing Twitter data using a variety of CDH components, including [Flume](http://flume.apache.org), [Oozie](http://incubator.apache.org/oozie), [Hive](http://hive.apache.org) and [Hue](http://cloudera.github.com/hue).
 
 Getting Started
 ---------------
@@ -20,6 +20,8 @@ Getting Started
 
 Configuring Flume
 ------------------
+
+You can skip this step by directly downloading some sample of data [here](https://github.com/romainr/cdh-twitter-example/blob/master/hue/tweets.zip).
 
 1. **Build or Download the custom Flume Source**
 
@@ -177,7 +179,7 @@ Starting the data pipeline
 
     Create the HDFS directory hierarchy for the Flume sink. Make sure that it will be accessible by the user running the Oozie workflow.  
     
-    Create 'flume' user in Hue. As a Hue superuser, go in the User Admin application and create a new user 'flume'.
+    Create a 'flume' user in Hue. As a Hue superuser, go in the User Admin application and create a new user 'flume'.
     
     This can also be done on the command line:
     <pre>
