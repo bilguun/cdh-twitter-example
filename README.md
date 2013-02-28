@@ -1,5 +1,7 @@
 Analyzing Twitter Data Using CDH
-===================
+================================
+
+Based on http://blog.cloudera.com/blog/2012/09/analyzing-twitter-data-with-hadoop/.
 
 This repository contains an example application for analyzing Twitter data using a variety of CDH components, including [Flume](http://flume.apache.org), [Oozie](http://incubator.apache.org/oozie), and [Hive](http://hive.apache.org).
 
