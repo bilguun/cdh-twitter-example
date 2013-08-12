@@ -30,8 +30,8 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <eclipse.output.directory>eclipse-classes</eclipse.output.directory>
-    <hive.version>0.10.0-cdh4.2.0</hive.version>
-    <hadoop.version>2.0.0-cdh4.2.0</hadoop.version>
+    <hive.version>0.11.0-cdh5.0.0-SNAPSHOT</hive.version>
+    <hadoop.version>2.1.0-cdh5.0.0-SNAPSHOT</hadoop.version>
   </properties>
 
   <build>
@@ -97,25 +97,20 @@
       <groupId>org.apache.hive</groupId>
       <artifactId>hive-serde</artifactId>
       <version>${hive.version}</version>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-common</artifactId>
       <version>${hadoop.version}</version>
-      <scope>provided</scope>
     </dependency>
   </dependencies>
 
   <repositories>
     <repository>
       <id>cloudera</id>
-      <url>https://repository.cloudera.com/artifactory/cloudera-repos</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
+      <url>https://repository.cloudera.com/content/repositories/snapshots</url>
       <snapshots>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
       </snapshots>
     </repository>
   </repositories>

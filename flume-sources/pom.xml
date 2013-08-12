@@ -29,8 +29,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <flume.version>1.3.0-cdh4.2.0</flume.version>
-    <hadoop.version>2.0.0-cdh4.2.0</hadoop.version>
+    <flume.version>1.3.0-cdh4.4.0-SNAPSHOT</flume.version>
+    <hadoop.version>2.0.0-cdh4.4.0-SNAPSHOT</hadoop.version>
   </properties>
 
   <build>
@@ -132,7 +132,7 @@
         <enabled>true</enabled>
       </releases>
       <snapshots>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
       </snapshots>
     </repository>
   </repositories>
